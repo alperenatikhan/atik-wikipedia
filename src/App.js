@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './style.css';
-import Loader from 'react-js-loader';
+import FadeIn from 'react-fade-in';
 
 export default function App() {
   let [loading, setLoading] = useState(false);
@@ -40,6 +40,7 @@ export default function App() {
 
         {article && (
           <>
+          <FadeIn delay= "200" transitionDuration= "600" >
             <h3> {title} </h3>
             <div
               style={{
@@ -48,7 +49,7 @@ export default function App() {
               }}
             >
               {image && (
-                <img style={{ width: '10rem', height: '10rem' }} src={image} />
+                <img style={{ width: '12rem', height: '8rem' }} src={image} />
               )}
             </div>
             <p
@@ -60,6 +61,7 @@ export default function App() {
             >
               {article}
             </p>
+            </FadeIn>
           </>
         )}
       </div>
