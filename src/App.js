@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './style.css';
 import FadeIn from 'react-fade-in';
+import Typing from 'react-typing-animation';
 
 export default function App() {
   let [loading, setLoading] = useState(false);
@@ -39,9 +40,9 @@ export default function App() {
         {loading && <p> Loading... </p>}
 
         {article && (
-          <>
+        <>  
           <FadeIn delay= "200" transitionDuration= "600" >
-            <h3> {title} </h3>
+            <Typing> <h3> {title}</h3> </Typing> 
             <div
               style={{
                 padding: '1%',
