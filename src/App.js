@@ -30,7 +30,7 @@ export default function App() {
         minHeight: '100vh'
       }}
     >
-      <div style={{ margin: '5%' }}>
+      <div style={{ margin: '10%' }}>
         <h1>Wikipedia Explorer</h1>
         <input
           style={{ width: '90%' }}
@@ -42,7 +42,8 @@ export default function App() {
         {article && (
         <>  
           <FadeIn delay= "200" transitionDuration= "600" >
-            <Typing> <h3> {title}</h3> </Typing> 
+          
+          <h3> {title} </h3> 
             <div
               style={{
                 padding: '1%',
